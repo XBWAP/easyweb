@@ -58,6 +58,7 @@ http.Handle("/", http.FileServer(http.Dir("./static")))
 
 完整的示例代码如下：
 
+
 package main
 
 import (
@@ -74,6 +75,7 @@ func main() {
 	fmt.Println("Server started on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
+
 在上面的代码中，我们使用 http.FileServer 函数将 ./static 目录下的所有文件返回给客户端，并使用 http.HandleFunc 函数将 index.html 文件返回给客户端。
 
 这样，当客户端请求 index.html 文件时，将返回该文件的内容，并且可以正确地加载该文件所需的静态文件。
@@ -109,6 +111,7 @@ func main() {
 	fmt.Println("Server started on port 8080")
 	http.ListenAndServe(":8080", nil)
 }
+
 这样，./static目录中的所有文件将被HTTP服务器直接提供。
 
 
